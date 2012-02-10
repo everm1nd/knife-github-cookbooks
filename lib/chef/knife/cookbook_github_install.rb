@@ -124,7 +124,7 @@ class Chef
       end
 
       def move_cookbook
-        shell_out!("mv #{temp_clone_path} #{File.join(@install_path, @cookbook_name)}", :cwd => tmpdir)
+        shell_out!("mv #{tmpdir}/#{temp_clone_path} #{File.join(@install_path, @cookbook_name)}")
       end
 
       def clear_existing_files(cookbook_path)
